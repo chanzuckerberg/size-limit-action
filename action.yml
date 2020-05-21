@@ -1,13 +1,17 @@
-name: 'size-limit-action'
-description: 'size-limit action'
-author: 'Andres Alvarez <a.alvarez.sor@gmail.com>'
+name: "size-limit-action"
+description: "size-limit action"
+author: "Andres Alvarez <a.alvarez.sor@gmail.com>"
 branding:
-  icon: 'activity'
-  color: 'green'
+  icon: "activity"
+  color: "green"
 inputs:
   access_token:
     required: true
-    description: 'a github access token'
+    description: "a github access token"
+  ignore_identical:
+    required: false
+    description: "whether or not identical reviews should be reposted on rebuild"
+    default: false
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
